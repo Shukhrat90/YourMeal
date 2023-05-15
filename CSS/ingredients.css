@@ -1,0 +1,36 @@
+.ingredients-title {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 130%;
+  margin-bottom: 4px;
+}
+
+.ingredients-list {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 130%;
+  margin-bottom: 4px;
+}
+
+.ingredients-item {
+  margin-bottom: 2px;
+}
+
+.ingredients-item:last-child {
+  margin-bottom: 0;
+}
+
+.ingredients-calories {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 130%;
+  color: #b1b1b1;
+}
+
+@media (min-width: 1024px) {
+  .ingredients-title,
+  .ingredients-list,
+  .ingredients-calories {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,181 @@
+.modal-delivery {
+  --gap: 8px;
+  background-color: #fff;
+  width: 100%;
+  min-height: 100%;
+  padding: 32px 10px;
+  display: flex;
+}
+
+.modal-delivery_container {
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-delivery_title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  margin-bottom: 18px;
+}
+
+.modal-delivery_form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex-grow: 1;
+  margin-bottom: 18px;
+}
+
+.modal-delivery_fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+
+.modal-delivery_fieldset_radio {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.modal-delivery_fieldset_hide {
+  visibility: hidden;
+}
+
+.modal-delivery_input {
+  width: 100%;
+  height: 30px;
+  border: 1px solid #f2f2f3;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 130%;
+  color: #000;
+}
+
+.modal-delivery_input_half {
+  flex-basis: calc((100% - var(--gap)) / 2);
+}
+
+.modal-delivery_input::placeholder {
+  color: #b1b1b1;
+}
+
+.modal-delivery_label {
+  display: flex;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.modal-delivery_radio {
+  -webkit-appearance: none; /*!(safari)*/
+  -moz-appearance: none; /*!(mozila)*/
+  appearance: none;
+  position: relative;
+  width: 12px;
+}
+
+.modal-delivery_radio:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #f2f2f3;
+}
+
+.modal-delivery_radio:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #000;
+  opacity: 0;
+}
+
+.modal-delivery_radio:checked:after {
+  opacity: 1;
+}
+
+.modal-delivery_submit {
+  padding: 9px;
+  background-color: #ff7020;
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  color: #fff;
+}
+
+.modal-delivery_submit:hover {
+  background-color: #ffab08;
+}
+.modal-delivery_submit:focus-visible {
+  background-color: #f86310;
+}
+.modal-delivery_submit:active {
+  transform: translate(1px, 2px);
+}
+.modal-delivery_submit:disabled {
+  background-color: #f9f9f9;
+  color: #ACACAC;
+}
+
+@media (min-width: 480px) {
+  .modal-delivery {
+    max-width: 524px;
+    min-height: auto;
+    padding: 20px 16px 29px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+  }
+
+  .modal-delivery_container {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .modal-delivery {
+    max-width: 684px;
+    padding: 44px 24px 24px 366px;
+    background: url("../img/donat.svg") 19px center,
+      linear-gradient(to right, #ffab08 50%, #fff 50%);
+    background-size: 302px, auto;
+    background-repeat: no-repeat;
+  }
+  .modal-delivery_title {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  .modal-delivery_form {
+    margin-bottom: 32px;
+    gap: 16px;
+  }
+  .modal-delivery_input {
+    font-size: 12px;
+    padding: 10px 12px;
+    height: 40px;
+  }
+  .modal-delivery_label {
+    font-size: 12px;
+  }
+  .modal-delivery_fieldset_radio {
+    gap: 12px;
+  }
+}
